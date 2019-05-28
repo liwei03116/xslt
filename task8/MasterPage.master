@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" %>
+
+<script runat="server">
+    /////////////////////////////////////////////////////////////
+    //                                                         //
+    //        Student Name: Li Wei                             //
+    //        Student ID No: 20576110                          //
+    //        Task No: 8                                       //
+    //        Unit code: FIT3043                               //
+    //        Unit name: Web systems 3                         //
+    //        Semester: 2                                      //
+    //        Year: 2011                                       //
+    //                                                         //
+    ///////////////////////////////////////////////////////////// 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        litBannerTitle.Text = Page.Title;
+        lblDate.Text = DateTime.Now.ToLongDateString();
+    }
+ </script>
+
+<html>
+ <head id="head1" runat="server">
+    <title></title>
+ </head>
+ <body>
+ 
+ <form id="form1" runat="server">
+ <table cellpadding="0" cellspacing="0">
+  <tr>
+   <td class="bordertxt">
+    <asp:Image ID="bennerl" runat="server" SkinID="bennerskinl"/>
+   </td>
+   <td class="bannertxt">
+    <asp:Literal ID="litBannerTitle" runat="server" />
+    </td>
+    <td class="bannertxt">
+     <asp:Image ID="bennerr" runat="server" SkinID="bennerskinr"/>
+    </td>
+    </tr>
+    <tr>
+    <td class="bannertxt"></td>
+     <td class="bannertxt" colspan="3" height="5">
+      <asp:SiteMapPath ID="SiteMapPath2" runat="server">
+         <PathSeparatorTemplate>
+            <asp:Image ID="hat" runat="server" ImageUrl="~/App_Themes/Images/haticon.gif" />
+         </PathSeparatorTemplate>
+      </asp:SiteMapPath> 
+      </td>
+      <td class="bannertxt"></td>
+    </tr>
+    <tr>
+     <td valign="top" class="bordertxt">
+     <div class="menu">
+      <asp:Menu StaticDisplayLevels="2" ID="menu1" runat="server" DataSourceID="sitmapdatasource1" StaticSubMenuIndent="25" ForeColor="Black">
+      <StaticMenuItemStyle CssClass="MenuStaItm" />
+      <DynamicHoverStyle CssClass="MenuDynHov" />
+      <DynamicMenuItemStyle CssClass="MenuDynItm" />
+      <StaticHoverStyle CssClass="MenuStaHov" />
+      </asp:Menu>
+      </div>
+      <asp:SiteMapDataSource ID="sitmapdatasource1" runat="server" /><br />
+      <%--<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+         <PathSeparatorTemplate>
+            <asp:Image ID="hat" runat="server" ImageUrl="~/WebResource.axd.gif" />
+         </PathSeparatorTemplate>
+      </asp:SiteMapPath>--%>  
+
+      <asp:Image ID="book" runat="server" SkinID="masterskin"/>
+        <asp:Calendar ID="mycalendar" runat="server" SkinID="CalendarView" />
+      </td>
+      <td colspan="2" style="height:327px; padding:12px" valign="top">
+            <asp:ContentPlaceHolder ID="Home" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Registration" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="AboutUs" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="OurHistory" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="FAQ" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Guidelines" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="SiteMap" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ViewOurBooks" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="emailus" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Login" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Updatebooks" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="addbook" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Browsetitlesofourfeaturedauthor" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Documentation" runat="server"></asp:ContentPlaceHolder>
+      </td>
+     </tr>
+     <tr>
+      <td class="footertxt">
+           <asp:Label ID="copyrightlint" runat="server" SkinID="copyright" /></td>
+      <td class="footertxt" align="right">
+         <asp:Label ID="lblDate" runat="server" /></td>
+      <td class="footertxt">
+      </td>
+     </tr>  
+   </table>
+   </form>
+
+ </body>
+ </html>

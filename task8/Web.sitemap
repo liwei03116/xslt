@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+  <siteMapNode>
+    <siteMapNode url="~/default.aspx" title="Home" />
+
+    <siteMapNode url="~/Registration.aspx" title="Registration" />
+
+    <siteMapNode url="~/Moreaboutus.aspx" title="More about us">
+      <siteMapNode url="~/Info/ourhistory.aspx" title="Our history" />
+      <siteMapNode url="~/Info/faq.aspx" title="Frequently asked questions" />
+      <siteMapNode url="~/Info/gfa.aspx" title="Guidlines for authors or similar" />
+    </siteMapNode>
+    <siteMapNode url="~/sitemap.aspx" title="Site Map" />
+
+    <siteMapNode url="~/viewbooks.aspx" title="View our books" />
+    
+    <siteMapNode url="~/email.aspx" title="Email us" />
+
+	  <siteMapNode url="~/locked/editbooks.aspx" title="Update books (staff only)" />
+
+    <siteMapNode url="~/titles.aspx" title="Browse titles of our featured author" />
+
+    <siteMapNode url="~/documentation.aspx" title="Documentation" />
+
+  </siteMapNode>
+  
+</siteMap>
